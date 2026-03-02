@@ -28,7 +28,7 @@ export default function AlbumGallery({images, title, date}: { images: ImageObjec
         <div className='flex flex-col items-start justify-start gap-6'>
             <div className='w-full flex items-start justify-between gap-6'>
                 <Link
-                    href="/albums"
+                    href="/"
                     className="inline-flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
                     <div
                         className="p-2 rounded-full border border-zinc-800 group-hover:border-zinc-400 transition-colors">
