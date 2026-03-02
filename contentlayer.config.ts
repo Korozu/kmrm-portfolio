@@ -11,7 +11,7 @@ export const Album = defineDocumentType(() => ({
         images: { type: 'list', of: { type: 'string' }, required: true },
     },
     computedFields: {
-        slug: { type: 'string', resolve: (doc) => doc._raw.flattenedPath.replace(/albums\//, '') },
+        slug: { type: 'string', resolve: (doc) => doc._raw.flattenedPath.split('/').pop() },
     }
 }))
 

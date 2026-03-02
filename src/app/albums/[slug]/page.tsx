@@ -2,18 +2,22 @@ import {allAlbums} from "contentlayer/generated";
 import {notFound} from "next/navigation";
 import AlbumGallery from "@/components/AlbumGallery";
 
+export const dynamic = 'force-static' // Force le mode SSG
+export const dynamicParams = false // Indique que seules les pages de generateStaticParams existent
+
 export async function generateStaticParams() {
-    return allAlbums.map((album) => ({
+    const paths = allAlbums.map((album) => ({
         slug: album.slug,
     }));
+
+    console.log("LOG - Slugs générés :", paths);
+    return paths;
 }
 
-interface PageParams {
-    params: { slug: string };
-}
+export default async function AlbumPage({params}: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
 
-export default function AlbumPage({params}: PageParams) {
-    const album = allAlbums.find(album => album.slug === params.slug);
+    const album = allAlbums.find((album) => album.slug === slug);
 
     if(!album) notFound()
 
