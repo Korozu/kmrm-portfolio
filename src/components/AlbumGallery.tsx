@@ -37,7 +37,7 @@ export default function AlbumGallery({images, title, date}: { images: ImageObjec
                     <span className="text-xs uppercase tracking-[0.2em] font-medium">Back</span>
                 </Link>
                 <div className='flex flex-col items-end gap-1'>
-                    <h1 className="text-5xl font-extrabold tracking-tighter mb-2">
+                    <h1 className="text-xl lg:text-5xl md:text-2xl font-extrabold tracking-tighter mb-2">
                         {title}
                     </h1>
                     <p className="text-zinc-400 text-lg uppercase tracking-widest">
