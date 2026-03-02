@@ -24,7 +24,7 @@ export default async function AlbumPage({params}: { params: Promise<{ slug: stri
     return (
         <main className="min-h-screen bg-black text-white py-12">
             <div className="container mx-auto px-4">
-                <AlbumGallery images={album.images} title={album.title} />
+                <AlbumGallery images={album.images} title={album.title} date={album.date} />
             </div>
         </main>
     )

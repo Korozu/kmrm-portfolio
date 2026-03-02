@@ -1,11 +1,14 @@
 "use client";
 
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 import Image from "next/image"; // Import du composant Next.js
-import {motion, AnimatePresence} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import {ImageObject} from "contentlayer/generated";
+import {format, parseISO} from "date-fns";
+import Link from "next/link";
+import {ArrowLeft} from "lucide-react";
 
-export default function AlbumGallery({images, title}: { images: ImageObject[], title: string }) {
+export default function AlbumGallery({images, title, date}: { images: ImageObject[], title: string, date: string }) {
     const [selectedImg, setSelectedImg] = useState<ImageObject | null>(null);
 
     useEffect(() => {
@@ -22,8 +25,28 @@ export default function AlbumGallery({images, title}: { images: ImageObject[], t
     }, []);
 
     return (
-        <div className="relative">
-            <h1 className="text-4xl font-bold mb-12 uppercase tracking-tighter">{title}</h1>
+        <div className='flex flex-col items-start justify-start gap-6'>
+            <div className='w-full flex items-start justify-between gap-6'>
+                <Link
+                    href="/albums"
+                    className="inline-flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
+                    <div
+                        className="p-2 rounded-full border border-zinc-800 group-hover:border-zinc-400 transition-colors">
+                        <ArrowLeft size={16}/>
+                    </div>
+                    <span className="text-xs uppercase tracking-[0.2em] font-medium">Back</span>
+                </Link>
+                <div className='flex flex-col items-end gap-1'>
+                    <h1 className="text-5xl font-extrabold tracking-tighter mb-2">
+                        {title}
+                    </h1>
+                    <p className="text-zinc-400 text-lg uppercase tracking-widest">
+                        {format(parseISO(date), 'dd-MM-yyyy')}
+                    </p>
+                </div>
+
+            </div>
+
 
             {/* Grille de photos */}
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">

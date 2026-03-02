@@ -19,8 +19,8 @@ export const AlbumCard = ({album}: AlbumCardProps) => {
                 />
             </div>
             {/* Overlay Infos */}
-            <div className="p-4 border-t border-white/10">
-                <div className="flex justify-between items-end">
+            <div className="px-2 py-4 border-t border-white/10">
+                <div className="flex justify-between items-center">
                     <div>
                         <h2 className="text-xl font-bold leading-tight uppercase">
                             {album.artist}
@@ -29,7 +29,7 @@ export const AlbumCard = ({album}: AlbumCardProps) => {
                             {album.title}
                         </p>
                     </div>
-                    <time className="text-[10px] text-zinc-600 font-mono rotate-90 origin-bottom-right mb-1">
+                    <time className="text-[20px] text-zinc-600 font-mono rotate-90 mb-1">
                         {format(parseISO(album.date), 'yyyy')}
                     </time>
                 </div>
