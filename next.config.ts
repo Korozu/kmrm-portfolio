@@ -1,8 +1,11 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+    /* config options here */
+    reactCompiler: true,
+    output: 'export',
+    images: {unoptimized: true},
+    basePath: '/kmrm-portfolio',
 };
 
 export default nextConfig;
