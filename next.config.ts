@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
     /* config options here */
     reactCompiler: true,
     output: 'export',
+    trailingSlash: true,
     images: {unoptimized: true},
-    basePath: '/kmrm-portfolio',
 };
 
 export default nextConfig;
