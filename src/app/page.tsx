@@ -1,11 +1,11 @@
-import {allAlbums} from "contentlayer/generated";
-import {compareDesc, parseISO} from "date-fns";
-import Link from "next/link";
-import {AlbumCard} from "@/components/AlbumCard";
+import { allAlbums } from 'contentlayer/generated';
+import { compareDesc, parseISO } from 'date-fns';
+import Link from 'next/link';
+import { AlbumCard } from '@/components/AlbumCard';
 
 export default function Home() {
     // On trie les albums du plus récent au plus ancien
-    const albums = allAlbums.sort((a, b) =>
+    const albums = allAlbums.toSorted((a, b) =>
         compareDesc(parseISO(a.date), parseISO(b.date))
     );
   return (

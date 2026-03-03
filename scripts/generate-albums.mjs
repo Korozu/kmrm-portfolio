@@ -32,15 +32,20 @@ async function generate() {
     if (!fs.existsSync(CONTENT_DEST)) fs.mkdirSync(CONTENT_DEST, { recursive: true });
 
     const folders = fs.readdirSync(ALBUMS_SOURCE).filter(f =>
-        fs.lstatSync(path.join(ALBUMS_SOURCE, f)).isDirectory()
+      fs.lstatSync(path.join(ALBUMS_SOURCE, f)).isDirectory()
     );
 
     for (const folder of folders) {
-        const destPath = path.join(CONTENT_DEST, `${folder}.md`);
+        // 1. Création du dossier spécifique dans content/albums
+        const albumFolder = path.join(CONTENT_DEST, folder);
+        const destPath = path.join(albumFolder, `${folder}.md`); // On l'appelle index.md ou page.md selon ton Contentlayer
 
-        // --- GUARD : On ne régénère pas si le fichier existe déjà ---
+        if (!fs.existsSync(albumFolder)) {
+            fs.mkdirSync(albumFolder, { recursive: true });
+        }
+
         if (fs.existsSync(destPath)) {
-            console.log(`⏩ Album sauté : ${folder}.md existe déjà.`);
+            console.log(`⏩ Skip: ${folder}/index.md existe déjà.`);
             continue;
         }
 
@@ -50,12 +55,11 @@ async function generate() {
         const coverFile = allFiles.find(f => f.toLowerCase().startsWith('cover.'));
         let galleryFiles = allFiles.filter(f => f !== coverFile);
 
-        // --- ORDRE ALÉATOIRE ---
         galleryFiles = shuffle(galleryFiles);
 
         const finalCoverPath = coverFile
-            ? `/images/albums/${folder}/${coverFile}`
-            : `/images/albums/${folder}/${galleryFiles[0]}`;
+          ? `/images/albums/${folder}/${coverFile}`
+          : `/images/albums/${folder}/${galleryFiles[0]}`;
 
         const imageList = [];
         for (const file of galleryFiles) {
@@ -69,8 +73,8 @@ async function generate() {
         const markdown = `---
 title: "${folder.replace(/-/g, ' ')}"
 artist: "Unknown Artist"
-venue: "Unknown Venue"
 date: "${new Date().toISOString().split('T')[0]}"
+venue: "Unknown Venue"
 cover: "${finalCoverPath}"
 images:
 ${imageList.map(img => `  - src: "${img.src}"
@@ -81,7 +85,7 @@ ${imageList.map(img => `  - src: "${img.src}"
 `;
 
         fs.writeFileSync(destPath, markdown);
-        console.log(`✨ Nouvel album généré : ${folder} (${imageList.length} photos mélangées).`);
+        console.log(`✨ Dossier et Markdown générés pour : ${folder}`);
     }
 }
 
