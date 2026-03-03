@@ -1,0 +1,43 @@
+"use client";
+
+import {Album} from "contentlayer/generated";
+import {format, parseISO} from "date-fns";
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+export const GalleryHeader = ({ album }: { album: Album }) => {
+    return <header className="relative h-[50vh] md:h-[70vh] w-full overflow-hidden">
+        <Image
+            src={album.cover}
+            alt={album.title}
+            fill
+            priority
+            className="object-cover object-center"
+        />
+
+        {/* Overlay Dégradé :
+            Transparent en haut -> Sombre au milieu -> Couleur de fond en bas
+        */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-[#0a0a0a]"/>
+
+        {/* Contenu textuel centré en bas */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center pb-16 md:pb-24 px-4">
+            <motion.div
+                initial={{y: 30, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{duration: 0.8, ease: "easeOut"}}
+                className="text-center"
+            >
+                <h1 className="text-xl md:text-4xl lg:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
+                    {album.artist}
+                </h1>
+                <div
+                    className="flex items-center justify-center gap-4 text-sm md:text-base font-mono uppercase tracking-[0.3em] text-zinc-400">
+                    <span>{album.venue}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-white"/>
+                    <span>{format(parseISO(album.date), 'dd-MM-yyyy')}</span>
+                </div>
+            </motion.div>
+        </div>
+    </header>
+}

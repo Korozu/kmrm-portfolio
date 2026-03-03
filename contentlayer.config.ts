@@ -17,6 +17,7 @@ export const Album = defineDocumentType(() => ({
     fields: {
         title: { type: 'string', required: true },
         artist: { type: 'string', required: true },
+        venue: { type: 'string', required: true },
         date: { type: 'date', required: true },
         cover: { type: 'string', required: true },
         images: { type: 'list', of: ImageObject, required: true },

@@ -1,16 +1,17 @@
 {
   "name": "kmrm-portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "contentlayer build && next dev",
-    "build": "next build",
+    "dev": "node scripts/generate-albums.mjs && contentlayer build && next dev",
+    "build": "node scripts/generate-albums.mjs && contentlayer build && next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "contentlayer": "^0.3.4",
     "date-fns": "^4.1.0",
+    "exifreader": "^4.36.2",
     "framer-motion": "^12.34.4",
     "lucide-react": "^0.576.0",
     "next": "16.1.6",

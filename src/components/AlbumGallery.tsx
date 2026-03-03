@@ -4,11 +4,10 @@ import {useEffect, useState} from "react";
 import Image from "next/image"; // Import du composant Next.js
 import {AnimatePresence, motion} from "framer-motion";
 import {ImageObject} from "contentlayer/generated";
-import {format, parseISO} from "date-fns";
 import Link from "next/link";
 import {ArrowLeft} from "lucide-react";
 
-export default function AlbumGallery({images, title, date}: { images: ImageObject[], title: string, date: string }) {
+export default function AlbumGallery({images, title}: { images: ImageObject[], title: string, date: string }) {
     const [selectedImg, setSelectedImg] = useState<ImageObject | null>(null);
 
     useEffect(() => {
@@ -36,15 +35,6 @@ export default function AlbumGallery({images, title, date}: { images: ImageObjec
                     </div>
                     <span className="text-xs uppercase tracking-[0.2em] font-medium">Back</span>
                 </Link>
-                <div className='flex flex-col items-end gap-1'>
-                    <h1 className="text-xl lg:text-5xl md:text-2xl font-extrabold tracking-tighter mb-2">
-                        {title}
-                    </h1>
-                    <p className="text-zinc-400 text-lg uppercase tracking-widest">
-                        {format(parseISO(date), 'dd-MM-yyyy')}
-                    </p>
-                </div>
-
             </div>
 
 
@@ -54,7 +44,7 @@ export default function AlbumGallery({images, title, date}: { images: ImageObjec
                     <motion.div
                         key={i}
                         layoutId={image.src}
-                        className="break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-zinc-900 relative"
+                        className="group relative break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-zinc-900"
                         onClick={() => setSelectedImg(image)}
                     >
                         {/* Utilisation de Image pour la grille */}
@@ -63,9 +53,36 @@ export default function AlbumGallery({images, title, date}: { images: ImageObjec
                             alt={`${title} - Photo ${i}`}
                             width={800} // Largeur de référence
                             height={1200} // Hauteur de référence (Next calculera le ratio)
-                            className="w-full h-auto hover:opacity-80 transition-opacity duration-500"
+                            className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
+
+                        {/* L'overlay EXIF au survol */}
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] flex items-end">
+                            <div className="p-4 w-full">
+                                <div className="flex justify-between items-center text-white border-t border-white/20 pt-3">
+
+                                    {/* Bloc Vitesse */}
+                                    <div className="flex flex-col">
+                                        <span className="text-[8px] uppercase tracking-widest text-zinc-400">Vitesse</span>
+                                        <span className="text-xs font-mono">{image.shutterSpeed || "—"}</span>
+                                    </div>
+
+                                    {/* Bloc Ouverture */}
+                                    <div className="flex flex-col items-center">
+                                        <span className="text-[8px] uppercase tracking-widest text-zinc-400">Ouverture</span>
+                                        <span className="text-xs font-mono">{image.aperture || "—"}</span>
+                                    </div>
+
+                                    {/* Bloc ISO */}
+                                    <div className="flex flex-col items-end">
+                                        <span className="text-[8px] uppercase tracking-widest text-zinc-400">ISO</span>
+                                        <span className="text-xs font-mono">{image.iso || "—"}</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </motion.div>
                 ))}
             </div>
