@@ -33,7 +33,7 @@ export default function AlbumGallery({images, title}: { images: ImageObject[], t
                         className="p-2 rounded-full border border-zinc-800 group-hover:border-zinc-400 transition-colors">
                         <ArrowLeft size={16}/>
                     </div>
-                    <span className="text-xs uppercase tracking-[0.2em] font-medium">Back</span>
+                    <span className="text-xs uppercase tracking-[0.2em] font-medium">Retour</span>
                 </Link>
             </div>
 

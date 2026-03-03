@@ -24,10 +24,11 @@ export default async function AlbumPage({params}: { params: Promise<{ slug: stri
 
     return (
         <main className="min-h-screen bg-black text-white">
-            <GalleryHeader album={album} />
+            <GalleryHeader album={album}/>
             <div className="container mx-auto px-4">
-                <AlbumGallery images={album.images} title={album.title} date={album.date} />
+                <AlbumGallery images={album.images} title={album.title} date={album.date}/>
             </div>
+            <div className="h-24 md:h-24"/>
         </main>
     )
 }

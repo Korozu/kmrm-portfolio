@@ -9,28 +9,29 @@ export default function Home() {
         compareDesc(parseISO(a.date), parseISO(b.date))
     );
   return (
-        <main className="min-h-screen bg-black text-white px-6 py-12">
-            {/* Header Minimaliste */}
-            <header className="max-w-7xl mx-auto mb-16">
-                <h1 className="text-5xl font-extrabold tracking-tighter mb-2">
-                    KMRM - SHOTS
-                </h1>
-                <p className="text-zinc-400 text-lg uppercase tracking-widest">
-                    Capturer l&#39;énergie brute de la scène.
-                </p>
-            </header>
+      <main className="min-h-screen bg-black text-white px-6 py-12 scroll-m-16">
+          {/* Header Minimaliste */}
+          <header className="max-w-7xl mx-auto mb-16">
+              <h1 className="text-5xl font-extrabold tracking-tighter mb-2">
+                  KMRM - SHOTS
+              </h1>
+              <p className="text-zinc-400 text-lg uppercase tracking-widest">
+                  Capturer l&#39;énergie brute de la scène.
+              </p>
+          </header>
 
-            {/* Grille d'Albums */}
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {albums.map((album) => (
-                    <Link
-                        key={album.slug}
-                        href={`/albums/${album.slug}`}
-                    >
-                        <AlbumCard album={album} />
-                    </Link>
-                ))}
-            </div>
-        </main>
-    );
+          {/* Grille d'Albums */}
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {albums.map((album) => (
+                  <Link
+                      key={album.slug}
+                      href={`/albums/${album.slug}`}
+                  >
+                      <AlbumCard album={album}/>
+                  </Link>
+              ))}
+          </div>
+          <div className="h-24 md:h-24"/>
+      </main>
+  );
 }
