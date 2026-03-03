@@ -8,7 +8,7 @@ interface AlbumCardProps {
 
 export const AlbumCard = ({album}: AlbumCardProps) => {
     return (
-        <div className="group relative overflow-hidden rounded-sm bg-zinc-900">
+        <div className="group relative overflow-hidden rounded-sm bg-indigo-900/20">
             <div className="aspect-[3/2] overflow-hidden">
                 <Image
                     src={album.cover}
