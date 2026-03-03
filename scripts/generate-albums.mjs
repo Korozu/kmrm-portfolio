@@ -76,6 +76,11 @@ artist: "Unknown Artist"
 date: "${new Date().toISOString().split('T')[0]}"
 venue: "Unknown Venue"
 cover: "${finalCoverPath}"
+network:
+    instagram: ""
+    facebook: ""
+    spotify: ""
+    youtube: ""
 images:
 ${imageList.map(img => `  - src: "${img.src}"
     shutterSpeed: "${img.shutterSpeed}"

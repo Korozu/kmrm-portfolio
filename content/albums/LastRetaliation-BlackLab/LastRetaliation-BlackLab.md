@@ -4,6 +4,10 @@ artist: "Last Retaliation"
 date: "2026-02-17"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/LastRetaliation-BlackLab/cover.jpg"
+network:
+  facebook: "https://www.facebook.com/profile.php?id=61561543829077"
+  instagram: "https://www.instagram.com/last.retaliation/"
+  youtube: "https://www.youtube.com/@LastRetaliation"
 images:
   - src: "/images/albums/LastRetaliation-BlackLab/KMR09489.jpg"
     shutterSpeed: "1/100"

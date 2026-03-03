@@ -4,6 +4,11 @@ artist: "Bomber"
 date: "2026-01-27"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/Bomber-BlackLab/cover.jpg"
+network:
+  facebook: "https://www.facebook.com/BomberOfficialBand"
+  instagram: "https://www.instagram.com/bomberofficialband/"
+  youtube: "https://www.youtube.com/@BomberOfficialBand"
+  spotify: "https://open.spotify.com/intl-fr/artist/4SojfDjKGVkZNzsHStKNlb?si=hCwG9XlrSaymgKtI8z92Hg"
 images:
   - src: "/images/albums/Bomber-BlackLab/KMR02813.jpg"
     shutterSpeed: "1/200"

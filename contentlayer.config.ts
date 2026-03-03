@@ -1,4 +1,4 @@
-import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, defineNestedType, makeSource } from 'contentlayer/source-files';
 
 // On définit ce qu'est une "Image avec EXIF"
 const ImageObject = defineNestedType(() => ({
@@ -9,7 +9,17 @@ const ImageObject = defineNestedType(() => ({
         aperture: { type: 'string', required: false, default: '' },
         iso: { type: 'string', required: false, default: '' },
     },
-}))
+}));
+
+const NetworkLink = defineNestedType(() => ({
+    name: 'NetworkLink',
+    fields: {
+        facebook: { type: 'string', default: '' },
+        instagram: { type: 'string', default: '' },
+        spotify: { type: 'string', default: '' },
+        youtube: { type: 'string', default: '' },
+    }
+}));
 
 export const Album = defineDocumentType(() => ({
     name: 'Album',
@@ -18,6 +28,7 @@ export const Album = defineDocumentType(() => ({
         title: { type: 'string', required: true },
         artist: { type: 'string', required: true },
         venue: { type: 'string', required: true },
+        network: { type: 'nested', of: NetworkLink },
         date: { type: 'date', required: true },
         cover: { type: 'string', required: true },
         images: { type: 'list', of: ImageObject, required: true },
@@ -25,9 +36,9 @@ export const Album = defineDocumentType(() => ({
     computedFields: {
         slug: { type: 'string', resolve: (doc) => doc._raw.flattenedPath.split('/').pop() },
     }
-}))
+}));
 
 export default makeSource({
     contentDirPath: 'content',
     documentTypes: [Album],
-})
+});
