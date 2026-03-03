@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export const GalleryHeader = ({ album }: { album: Album }) => {
-    return <header className="relative h-[50vh] md:h-[70vh] w-full overflow-hidden">
+    return <header className="relative h-[30vh] md:h-[50vh] w-full overflow-hidden">
         <Image
             src={album.cover}
             alt={album.title}
@@ -18,7 +18,7 @@ export const GalleryHeader = ({ album }: { album: Album }) => {
         {/* Overlay Dégradé :
             Transparent en haut -> Sombre au milieu -> Couleur de fond en bas
         */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-[#0a0a0a]"/>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-black/100"/>
 
         {/* Contenu textuel centré en bas */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pb-16 md:pb-24 px-4">

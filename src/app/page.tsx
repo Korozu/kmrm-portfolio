@@ -31,11 +31,6 @@ export default function Home() {
                     </Link>
                 ))}
             </div>
-
-            <footer className="max-w-7xl mx-auto mt-24 pt-8 border-t border-white/10 text-zinc-600 text-xs flex justify-between">
-                <p>© 2026 — kmrm shots©</p>
-                <p>Built with Next.js & Passion</p>
-            </footer>
         </main>
     );
 }

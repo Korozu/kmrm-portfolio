@@ -26,7 +26,7 @@ export const AlbumCard = ({album}: AlbumCardProps) => {
                             {album.artist}
                         </h2>
                         <p className="text-sm text-zinc-500 font-mono">
-                            {album.title}
+                            {album.venue}
                         </p>
                     </div>
                     <time className="text-[20px] text-zinc-600 font-mono rotate-90 mb-1">
