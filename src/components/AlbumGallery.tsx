@@ -1,13 +1,20 @@
 "use client";
 
 import {useEffect, useState} from "react";
-import Image from "next/image"; // Import du composant Next.js
+import Image from "next/image";
 import {AnimatePresence, motion} from "framer-motion";
 import {ImageObject} from "contentlayer/generated";
 import Link from "next/link";
 import {ArrowLeft} from "lucide-react";
+import { ExifData } from '@/components/ExifDataRow';
 
-export default function AlbumGallery({images, title}: { images: ImageObject[], title: string, date: string }) {
+interface AlbumGalleryProps {
+    images: ImageObject[];
+    title: string;
+    date: string;
+}
+
+export default function AlbumGallery({images, title}: Readonly<AlbumGalleryProps>) {
     const [selectedImg, setSelectedImg] = useState<ImageObject | null>(null);
 
     useEffect(() => {
@@ -47,7 +54,6 @@ export default function AlbumGallery({images, title}: { images: ImageObject[], t
                         className="group relative break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-zinc-900"
                         onClick={() => setSelectedImg(image)}
                     >
-                        {/* Utilisation de Image pour la grille */}
                         <Image
                             src={image.src}
                             alt={`${title} - Photo ${i}`}
@@ -57,34 +63,14 @@ export default function AlbumGallery({images, title}: { images: ImageObject[], t
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
 
-                        {/* L'overlay EXIF au survol */}
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] flex items-end">
-                            <div className="p-4 w-full">
-                                <div className="flex justify-between items-center text-white border-t border-white/20 pt-3">
-
-                                    {/* Bloc Vitesse */}
-                                    <div className="flex flex-col">
-                                        <span className="text-[8px] uppercase tracking-widest text-zinc-400">Vitesse</span>
-                                        <span className="text-xs font-mono">{image.shutterSpeed || "—"}</span>
-                                    </div>
-
-                                    {/* Bloc Ouverture */}
-                                    <div className="flex flex-col items-center">
-                                        <span className="text-[8px] uppercase tracking-widest text-zinc-400">Ouverture</span>
-                                        <span className="text-xs font-mono">{image.aperture || "—"}</span>
-                                    </div>
-
-                                    {/* Bloc ISO */}
-                                    <div className="flex flex-col items-end">
-                                        <span className="text-[8px] uppercase tracking-widest text-zinc-400">ISO</span>
-                                        <span className="text-xs font-mono">{image.iso || "—"}</span>
-                                    </div>
-
-                                </div>
-                            </div>
+                        <div className="hidden md:flex absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] flex items-end">
+                            <ExifData iso={image.iso} aperture={image.aperture} shutterSpeed={image.shutterSpeed}/>
+                        </div>
+                        <div className="md:hidden absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent">
+                            <ExifData iso={image.iso} aperture={image.aperture} shutterSpeed={image.shutterSpeed}/>
                         </div>
                     </motion.div>
-                ))}
+                    ))}
             </div>
 
             {/* Modale d'agrandissement */}
@@ -113,14 +99,17 @@ export default function AlbumGallery({images, title}: { images: ImageObject[], t
                                     className="object-contain shadow-2xl"
                                     sizes="100vw"
                                 />
+                                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                                    <ExifData iso={selectedImg.iso} aperture={selectedImg.aperture} shutterSpeed={selectedImg.shutterSpeed}/>
+                                </div>
                             </div>
 
                             <motion.div
-                                initial={{y: 10, opacity: 0}}
-                                animate={{y: 0, opacity: 1}}
+                                initial={{ y: 10, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
                                 className="mt-4 text-center"
                             >
-                                <button
+                            <button
                                     onClick={() => setSelectedImg(null)}
                                     className="mt-4 text-xs text-zinc-500 hover:text-white uppercase tracking-widest border border-zinc-800 px-4 py-2 rounded-full transition-colors"
                                 >

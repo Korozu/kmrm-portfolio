@@ -18,9 +18,6 @@ export const GalleryHeader = ({ album }: { album: Album }) => {
             className="object-cover object-center"
         />
 
-        {/* Overlay Dégradé :
-            Transparent en haut -> Sombre au milieu -> Couleur de fond en bas
-        */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-black/100"/>
         <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
             <motion.div
