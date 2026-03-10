@@ -1,12 +1,12 @@
 "use client";
 
-import {useEffect, useState} from "react";
+import {MouseEventHandler, useEffect, useState} from "react";
 import Image from "next/image";
 import {AnimatePresence, motion} from "framer-motion";
 import {ImageObject} from "contentlayer/generated";
 import Link from "next/link";
 import {ArrowLeft} from "lucide-react";
-import { ExifData } from '@/components/ExifDataRow';
+import {ExifData} from '@/components/ExifDataRow';
 
 interface AlbumGalleryProps {
     images: ImageObject[];
@@ -30,6 +30,11 @@ export default function AlbumGallery({images, title}: Readonly<AlbumGalleryProps
         return () => window.removeEventListener("keydown", handleEsc);
     }, []);
 
+    const handleContextMenu: MouseEventHandler<HTMLDivElement> = (e) => {
+        e.preventDefault(); // Empêche le menu contextuel de s'ouvrir
+        alert("Les photos de ce portfolio sont protégées contre le téléchargement. Si vous souhaitez les utiliser, veuillez me contacter sur Instagram :)");
+    };
+
     return (
         <div className='flex flex-col items-start justify-start gap-6'>
             <div className='w-full flex items-start justify-between gap-6'>
@@ -43,7 +48,6 @@ export default function AlbumGallery({images, title}: Readonly<AlbumGalleryProps
                     <span className="text-xs uppercase tracking-[0.2em] font-medium">Retour</span>
                 </Link>
             </div>
-
 
             {/* Grille de photos */}
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
@@ -63,7 +67,7 @@ export default function AlbumGallery({images, title}: Readonly<AlbumGalleryProps
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
 
-                        <div className="hidden md:flex absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] flex items-end">
+                        <div className="hidden md:flex absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] items-end" onContextMenu={handleContextMenu}>
                             <ExifData iso={image.iso} aperture={image.aperture} shutterSpeed={image.shutterSpeed}/>
                         </div>
                         <div className="md:hidden absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent">
@@ -99,9 +103,7 @@ export default function AlbumGallery({images, title}: Readonly<AlbumGalleryProps
                                     className="object-contain shadow-2xl"
                                     sizes="100vw"
                                 />
-                                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
-                                    <ExifData iso={selectedImg.iso} aperture={selectedImg.aperture} shutterSpeed={selectedImg.shutterSpeed}/>
-                                </div>
+                                <div className="hidden md:flex absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] items-end" onContextMenu={handleContextMenu} />
                             </div>
 
                             <motion.div
