@@ -1,8 +1,8 @@
 ---
 title: "HollowFrequency BlackLab"
 artist: "Hollow Frequency"
-date: "2026-04-15"
-venue: "Unknown Venue"
+date: "2026-04-14"
+venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/HollowFrequency-BlackLab/cover.jpg"
 network:
     instagram: "https://www.instagram.com/hollow.frequency"
