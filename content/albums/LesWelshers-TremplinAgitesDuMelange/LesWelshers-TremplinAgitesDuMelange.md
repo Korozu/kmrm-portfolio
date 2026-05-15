@@ -2,7 +2,7 @@
 title: "LesWelshers TremplinAgitesDuMelange"
 artist: "Les Welshers"
 date: "2026-05-09"
-venue: "Tremplin - Les Agités du Mélange"
+venue: "Tremplin - Les Agités du Mélange, Vieux-Condé"
 cover: "/images/albums/LesWelshers-TremplinAgitesDuMelange/cover.jpg"
 network:
     instagram: "https://www.instagram.com/leswelshers/"

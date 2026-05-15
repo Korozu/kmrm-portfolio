@@ -2,7 +2,7 @@
 title: "Barrabas TremplinAgitesDuMelange"
 artist: "Barabbas"
 date: "2026-05-09"
-venue: "Tremplin - Les Agités du Mélange"
+venue: "Tremplin - Les Agités du Mélange, Vieux-Condé"
 cover: "/images/albums/Barrabas-TremplinAgitesDuMelange/KMR06947.jpg"
 network:
     instagram: "https://www.instagram.com/b.a.r.a.b.b.a.s/"
