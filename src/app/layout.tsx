@@ -2,6 +2,8 @@ import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import {Footer} from "@/components/layout/Footer";
+import {Header} from "@/components/layout/Header";
+import {LanguageProvider} from "@/contexts/LanguageContext";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -28,16 +30,20 @@ export default function RootLayout({
             className={`${geistSans.variable} ${geistMono.variable} antialiased 
                 h-[100dvh] w-full bg-[#0a0a0a] text-white overflow-hidden relative m-0`}
         >
-        {/* 1. Le contenu qui scrolle en toute indépendance */}
-        <main className="h-full w-full overflow-y-auto overflow-x-hidden">
-            {children}
+        <LanguageProvider>
+            <Header />
 
-            {/* 2. Un espace vide (spacer) pour que le contenu ne passe pas
-                           SOUS le footer à la fin du scroll */}
-        </main>
+            {/* 1. Le contenu qui scrolle en toute indépendance */}
+            <main className="h-full w-full overflow-y-auto overflow-x-hidden pt-[73px] mb-22">
+                {children}
 
-        {/* 3. Le Footer en position absolue/fixe */}
-        <Footer/>
+                {/* 2. Un espace vide (spacer) pour que le contenu ne passe pas
+                               SOUS le footer à la fin du scroll */}
+            </main>
+
+            {/* 3. Le Footer en position absolue/fixe */}
+            <Footer/>
+        </LanguageProvider>
         </body>
         </html>
     );
