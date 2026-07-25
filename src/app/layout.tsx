@@ -34,11 +34,8 @@ export default function RootLayout({
             <Header />
 
             {/* 1. Le contenu qui scrolle en toute indépendance */}
-            <main className="h-full w-full overflow-y-auto overflow-x-hidden pt-[73px] mb-22">
+            <main className="h-full w-full overflow-y-auto overflow-x-hidden pt-[73px] pb-22">
                 {children}
-
-                {/* 2. Un espace vide (spacer) pour que le contenu ne passe pas
-                               SOUS le footer à la fin du scroll */}
             </main>
 
             {/* 3. Le Footer en position absolue/fixe */}
