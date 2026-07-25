@@ -53,7 +53,7 @@ export default function AlbumGallery({images, title}: Readonly<AlbumGalleryProps
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
                 {images.map((image, i) => (
                     <motion.div
-                        key={i}
+                        key={image.src+i}
                         layoutId={image.src}
                         className="group relative break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-zinc-900"
                         onClick={() => setSelectedImg(image)}

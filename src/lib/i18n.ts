@@ -11,6 +11,11 @@ export const translations = {
       title: 'Komoremi',
       subtitle: 'Capturer l\'énergie brute de la scène.'
     },
+    exif: {
+      shutterSpeed: 'Vitesse',
+      aperture: 'Ouverture',
+      iso: 'ISO'
+    },
     about: {
       title: 'À propos',
       bio: {
@@ -169,6 +174,11 @@ export const translations = {
       pricing: 'Pricing',
       title: 'Komoremi',
       subtitle: 'Capturing the raw energy of the stage.'
+    },
+    exif: {
+      shutterSpeed: 'Shutter Speed',
+      aperture: 'Aperture',
+      iso: 'ISO'
     },
     about: {
       title: 'About',
