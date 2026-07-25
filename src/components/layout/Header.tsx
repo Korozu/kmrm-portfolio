@@ -26,15 +26,15 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-primary/30">
         <nav className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <Image src="/logo.png" alt="KMRM logo" width={40} height={40} />
               <div className="flex flex-col leading-tight">
-                <span className="text-md sm:text-xl font-bold tracking-tight">{t.nav.title}</span>
-                <span className="text-zinc-400 text-xs sm:text-md">{t.nav.subtitle}</span>
+                <span className="text-md sm:text-xl font-bold tracking-tight text-accent">{t.nav.title}</span>
+                <span className="text-secondary text-xs sm:text-md">{t.nav.subtitle}</span>
               </div>
             </Link>
 
@@ -44,22 +44,22 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-zinc-300 hover:text-white transition-colors font-medium"
+                  className="text-zinc-300 hover:text-accent transition-colors font-medium"
                 >
                   {item.label}
                 </Link>
               ))}
 
               {/* Language Switcher */}
-              <div className="flex gap-2 ml-4 border-l border-zinc-700 pl-4">
+              <div className="flex gap-2 ml-4 border-l border-primary/30 pl-4">
                 {locales.map((lang) => (
                   <button
                     key={lang}
                     onClick={() => setLocale(lang)}
                     className={`text-sm font-medium uppercase transition-colors ${
                       locale === lang
-                        ? 'text-white'
-                        : 'text-zinc-500 hover:text-zinc-300'
+                        ? 'text-primary'
+                        : 'text-zinc-500 hover:text-accent'
                     }`}
                   >
                     {lang}
@@ -71,7 +71,7 @@ export function Header() {
             {/* Burger Button Mobile */}
             <button
               onClick={toggleMobileMenu}
-              className="md:hidden text-white p-2 hover:bg-zinc-800 rounded-lg transition-colors"
+              className="md:hidden text-white p-2 hover:bg-primary/20 rounded-lg transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -97,7 +97,7 @@ export function Header() {
 
         {/* Sidebar */}
         <div
-          className={`absolute top-0 right-0 h-full w-64 bg-zinc-900 border-l border-zinc-800 shadow-2xl transform transition-transform duration-300 ${
+          className={`absolute top-0 right-0 h-full w-64 bg-surface border-l border-primary/30 shadow-2xl transform transition-transform duration-300 ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -109,7 +109,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={closeMobileMenu}
-                  className="text-lg text-zinc-300 hover:text-white transition-colors font-medium"
+                  className="text-lg text-zinc-300 hover:text-accent transition-colors font-medium"
                 >
                   {item.label}
                 </Link>

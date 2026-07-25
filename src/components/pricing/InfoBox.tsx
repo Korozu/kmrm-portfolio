@@ -10,27 +10,27 @@ export interface InfoBoxProps {
 export default function InfoBox({ type = 'info', children, className = '' }: InfoBoxProps) {
   const styles = {
     info: {
-      bg: 'bg-blue-950/30',
-      border: 'border-blue-800/50',
-      icon: <InfoIcon className="w-5 h-5 text-blue-400" />,
-      text: 'text-blue-300',
+      bg: 'bg-secondary/20',
+      border: 'border-secondary/50',
+      icon: <InfoIcon className="w-5 h-5 text-secondary" />,
+      text: 'text-zinc-300',
     },
     warning: {
-      bg: 'bg-amber-950/30',
-      border: 'border-amber-800/50',
-      icon: <AlertCircleIcon className="w-5 h-5 text-amber-400" />,
-      text: 'text-amber-300',
+      bg: 'bg-accent/20',
+      border: 'border-accent/50',
+      icon: <AlertCircleIcon className="w-5 h-5 text-accent" />,
+      text: 'text-zinc-300',
     },
     success: {
-      bg: 'bg-green-950/30',
-      border: 'border-green-800/50',
-      icon: <CheckCircleIcon className="w-5 h-5 text-green-400" />,
-      text: 'text-green-300',
+      bg: 'bg-primary/20',
+      border: 'border-primary/50',
+      icon: <CheckCircleIcon className="w-5 h-5 text-primary" />,
+      text: 'text-zinc-300',
     },
     note: {
-      bg: 'bg-zinc-900/50',
-      border: 'border-zinc-700',
-      icon: <MessageCircleIcon className="w-5 h-5 text-zinc-400" />,
+      bg: 'bg-muted/20',
+      border: 'border-muted/50',
+      icon: <MessageCircleIcon className="w-5 h-5 text-muted" />,
       text: 'text-zinc-300',
     },
   };

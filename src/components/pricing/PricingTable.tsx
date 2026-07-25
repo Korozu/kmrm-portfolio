@@ -25,11 +25,11 @@ export default function PricingTable({
   const { t } = useLanguage();
 
   return (
-    <div className={`bg-zinc-900 border border-zinc-800 rounded-lg overflow-hidden ${className}`}>
-      <div className="p-6 border-b border-zinc-800">
-        <h2 className="text-2xl font-bold mb-2">{title}</h2>
+    <div className={`bg-surface border border-primary/30 rounded-lg overflow-hidden ${className}`}>
+      <div className="p-6 border-b border-primary/20">
+        <h2 className="text-2xl font-bold mb-2 text-accent">{title}</h2>
         {description && (
-          <p className="text-zinc-400 text-sm italic leading-relaxed">
+          <p className="text-secondary text-sm italic leading-relaxed">
             {description}
           </p>
         )}
@@ -38,21 +38,21 @@ export default function PricingTable({
       <div className="overflow-x-auto">
         <table className="w-full">
           <thead>
-            <tr className="bg-zinc-950/50 border-b border-zinc-800">
-              <th className="text-left p-4 font-semibold text-zinc-300">{t.pricing.tables.prestation}</th>
-              <th className="text-left p-4 font-semibold text-zinc-300">{t.pricing.tables.contenu}</th>
-              <th className="text-right p-4 font-semibold text-zinc-300">{t.pricing.tables.tarif}</th>
+            <tr className="bg-muted/20 border-b border-primary/20">
+              <th className="text-left p-4 font-semibold text-accent">{t.pricing.tables.prestation}</th>
+              <th className="text-left p-4 font-semibold text-accent">{t.pricing.tables.contenu}</th>
+              <th className="text-right p-4 font-semibold text-accent">{t.pricing.tables.tarif}</th>
             </tr>
           </thead>
           <tbody>
             {rows.map((row, index) => (
               <tr
                 key={row.prestation + index}
-                className="border-b border-zinc-800/50 hover:bg-zinc-800/30 transition-colors"
+                className="border-b border-muted/30 hover:bg-primary/10 transition-colors"
               >
-                <td className="p-4 font-medium">{row.prestation}</td>
+                <td className="p-4 font-medium text-zinc-100">{row.prestation}</td>
                 <td className="p-4 text-zinc-300 text-sm">{row.contenu}</td>
-                <td className="p-4 text-right font-semibold text-lg whitespace-nowrap">
+                <td className="p-4 text-right font-semibold text-lg whitespace-nowrap text-primary">
                   {row.tarif}
                 </td>
               </tr>
@@ -62,11 +62,11 @@ export default function PricingTable({
       </div>
 
       {notes && notes.length > 0 && (
-        <div className="p-6 bg-zinc-950/30 border-t border-zinc-800">
+        <div className="p-6 bg-muted/20 border-t border-primary/20">
           <ul className="space-y-2">
             {notes.map((note, index) => (
-              <li key={note + index} className="text-sm text-zinc-400 flex items-start">
-                <span className="mr-2 mt-1">•</span>
+              <li key={note + index} className="text-sm text-secondary flex items-start">
+                <span className="mr-2 mt-1 text-primary">•</span>
                 <span>{note}</span>
               </li>
             ))}

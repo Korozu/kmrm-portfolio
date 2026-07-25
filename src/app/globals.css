@@ -3,11 +3,25 @@
 :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    /* Palette de couleurs sobres avec tons bleus et contrastes accessibles */
+    --color-primary: #6b9db8;        /* Bleu-gris lumineux (contraste AAA sur fond noir) */
+    --color-primary-dark: #4a7b94;   /* Bleu-gris moyen */
+    --color-secondary: #8bb4ca;      /* Bleu-gris très clair (contraste AAA) */
+    --color-accent: #a3c5d6;         /* Bleu pâle lumineux (contraste AAA) */
+    --color-muted: #7a8e9d;          /* Bleu-gris sombre */
+    --color-surface: #1a1a1a;        /* Surface légèrement plus claire */
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-primary: var(--color-primary);
+    --color-primary-dark: var(--color-primary-dark);
+    --color-secondary: var(--color-secondary);
+    --color-accent: var(--color-accent);
+    --color-muted: var(--color-muted);
+    --color-surface: var(--color-surface);
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
 }

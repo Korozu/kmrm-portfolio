@@ -161,10 +161,28 @@ export const translations = {
           text: 'Inclus dans un rayon de 30 km autour de Lille. Au-delà, supplément de 0,40 € / km ou forfait à définir selon la distance.',
         },
       },
+      notesModalities: {
+        title: 'Notes & Modalités',
+        delivery: {
+          title: 'Délais de livraison',
+          text: 'Pour les concerts et événements, livraison sous 48h à 72h (ou 24h sur demande avec supplément).',
+        },
+        travel: {
+          title: 'Frais de déplacement',
+          text: 'Inclus dans un rayon de 30 km autour de Lille. Au-delà, supplément de 0,40 € / km ou forfait à définir selon la distance.',
+        },
+        solidarity: {
+          title: 'Engagements culturels et solidaires',
+          text: 'Dans le cadre de nos engagements culturels et solidaires, l\'association peut ponctuellement réaliser des prestations à titre gracieux ou sous forme de partenariat pour soutenir des projets émergents ou des événements associatifs.',
+        },
+      },
       cta: {
         title: 'Besoin d\'un devis personnalisé ?',
         text: 'Chaque projet est unique. N\'hésitez pas à me contacter pour discuter de vos besoins et obtenir un devis adapté à votre événement, tournée ou projet spécifique.',
         button: 'Demander un devis',
+      },
+      association: {
+        text: 'Choisir Komoremi, c\'est soutenir une association passionnée (Loi 1901) ! Chaque prestation nous permet de financer du matériel plus performant et d\'élever continuellement la qualité visuelle des projets que nous couvrons avec vous.',
       },
     },
   },
@@ -325,10 +343,28 @@ export const translations = {
           text: 'Included within 30 km around Lille. Beyond that, surcharge of €0.40 / km or package to be defined according to distance.',
         },
       },
+      notesModalities: {
+        title: 'Notes & Terms',
+        delivery: {
+          title: 'Delivery time',
+          text: 'For concerts and events, delivery within 48h to 72h (or 24h on request with surcharge).',
+        },
+        travel: {
+          title: 'Travel fees',
+          text: 'Included within 30 km around Lille. Beyond that, surcharge of €0.40 / km or package to be defined according to distance.',
+        },
+        solidarity: {
+          title: 'Cultural and solidarity commitments',
+          text: 'As part of our cultural and solidarity commitments, the association may occasionally provide services free of charge or through partnerships to support emerging projects or community events.',
+        },
+      },
       cta: {
         title: 'Need a personalized quote?',
         text: 'Each project is unique. Feel free to contact me to discuss your needs and get a quote tailored to your event, tour or specific project.',
         button: 'Request a quote',
+      },
+      association: {
+        text: 'Choosing Komoremi means supporting a passionate non-profit organization (French Law 1901)! Each service allows us to finance better equipment and continuously elevate the visual quality of the projects we cover with you.',
       },
     },
   },
