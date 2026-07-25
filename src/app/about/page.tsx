@@ -24,9 +24,10 @@ export default function AboutPage() {
               {t.about.bio.title}
             </h2>
           </div>
-          <p className="text-zinc-300 text-lg md:text-xl leading-relaxed">
-            {t.about.bio.content}
-          </p>
+          <div
+            className="text-zinc-300 text-lg md:text-xl leading-relaxed whitespace-pre-line"
+            dangerouslySetInnerHTML={{ __html: t.about.bio.content }}
+          />
         </section>
 
         {/* Section Services/Collaborations */}

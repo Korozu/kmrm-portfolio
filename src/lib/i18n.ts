@@ -20,7 +20,11 @@ export const translations = {
       title: 'À propos',
       bio: {
         title: 'Bio',
-        content: 'Photographe spécialisé dans la musique live (Rock, Métal, Scènes alternatives) et basé dans la métropole lilloise, je sillonne les salles et les festivals pour immortaliser la fureur, la lumière et l\'émotion du live.'
+        content: 'Photographe basé dans la métropole lilloise, j\'ai débuté en janvier 2026, poussé par la passion du live et le travail de photographes de la région comme <a href="https://instagram.com/mavo_photographe" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-all duration-300 underline decoration-primary/50 hover:decoration-secondary underline-offset-4 font-medium">@mavo_photographe</a> et <a href="https://instagram.com/e_po" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-all duration-300 underline decoration-primary/50 hover:decoration-secondary underline-offset-4 font-medium">@e_po</a>.\n' +
+            '\n' +
+            'Formé sur le terrain dans l\'ambiance authentique des petites salles lilloises (Caf&disquaire, High Voltage Bar, Le Circus), j\'ai rapidement évolué vers des scènes plus importantes comme The Black Lab et La Bulle Café.\n' +
+            '\n' +
+            'Que ce soit pour des groupes de musique ou des événements culturels organisés par les mairies et collectivités, j\'apporte un regard immersif et dynamique pour immortaliser vos temps forts.'
       },
       services: {
         title: 'Services/Collaborations',
@@ -202,7 +206,11 @@ export const translations = {
       title: 'About',
       bio: {
         title: 'Bio',
-        content: 'Photographer specialized in live music (Rock, Metal, Alternative scenes) and based in the Lille metropolis, I travel through venues and festivals to capture the fury, light and emotion of live performances.'
+        content: 'Based in the Lille metropolitan area (France), I started my concert photography journey in January 2026, driven by a passion for live music and inspired by local photographers like <a href="https://instagram.com/mavo_photographe" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-all duration-300 underline decoration-primary/50 hover:decoration-secondary underline-offset-4 font-medium">@mavo_photographe</a> and <a href="https://instagram.com/e_po" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-secondary transition-all duration-300 underline decoration-primary/50 hover:decoration-secondary underline-offset-4 font-medium">@e_po</a>.\n' +
+            '\n' +
+            'Self-taught on the ground in the raw atmosphere of local venues (Caf&disquaire, High Voltage Bar, Le Circus), I quickly moved on to shoot larger stages such as The Black Lab and La Bulle Café.\n' +
+            '\n' +
+            'Whether working for bands, or cultural events hosted by city halls and local authorities, I bring a dynamic and immersive perspective to capture your key moments.'
       },
       services: {
         title: 'Services/Collaborations',
