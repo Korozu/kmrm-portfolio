@@ -54,9 +54,8 @@ async function generate() {
         const allFiles = fs.readdirSync(fullPath).filter(f => /\.(jpg|jpeg|png)$/i.test(f));
 
         const coverFile = allFiles.find(f => f.toLowerCase().startsWith('cover.'));
-        let galleryFiles = allFiles.filter(f => f !== coverFile);
 
-        galleryFiles = shuffle(galleryFiles);
+        const galleryFiles = shuffle(allFiles);
 
         const finalCoverPath = coverFile
           ? `/images/albums/${folder}/${coverFile}`
