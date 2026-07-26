@@ -4,6 +4,7 @@ artist: "Seedy Liars"
 date: "2026-05-13"
 venue: "La Bulle Café, Lille"
 cover: "/images/albums/SeedyLiars-LaBulle/cover.jpg"
+passwordHash: "2dba049d84dc2a003fdbafc687ed920e31bf06b5ed32ca7013597bffaa84e9c1"
 network:
     instagram: "https://www.instagram.com/seedyliars/"
     facebook: "https://www.facebook.com/theseedyliars"

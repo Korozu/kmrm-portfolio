@@ -4,6 +4,7 @@ artist: "9 Dollz"
 date: "2026-05-09"
 venue: "Tremplin - Les Agités du Mélange, Vieux-Condé"
 cover: "/images/albums/9Dollz-TremplinAgitesDuMelange/cover.jpg"
+passwordHash: "aa2f7ffbaaf490518995dee335cd818a43255fdb65f33a1ddd699ddb343911c1"
 network:
     instagram: "https://www.instagram.com/9dollzmusic/"
     facebook: "https://www.facebook.com/9DOLLZ"

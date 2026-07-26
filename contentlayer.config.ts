@@ -32,6 +32,7 @@ export const Album = defineDocumentType(() => ({
         date: { type: 'date', required: true },
         cover: { type: 'string', required: true },
         images: { type: 'list', of: ImageObject, required: true },
+        passwordHash: { type: 'string', required: false, default: '' },
     },
     computedFields: {
         slug: { type: 'string', resolve: (doc) => doc._raw.flattenedPath.split('/').pop() },

@@ -4,6 +4,7 @@ artist: "Necroshade"
 date: "2026-01-27"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/Necroshade-BlackLab/cover.jpg"
+passwordHash: "745404c5ddc8de01ac65601769344beb25f65e1ef579cdd27e2505a2e54d0b47"
 network:
   facebook: "https://www.facebook.com/NecroshadeDM"
   instagram: "https://www.instagram.com/necroshadedm/"

@@ -4,6 +4,7 @@ artist: "One Zero"
 date: "2026-01-23"
 venue: "High Voltage Bar, Lille"
 cover: "/images/albums/OneZero-HighVoltage/cover.jpg"
+passwordHash: "612440373c05cd490da7a102660a7e1d9b493f538ae2433ce3a33abd93b62127"
 network:
     instagram: "https://www.instagram.com/onezeroff/"
     facebook: "https://www.facebook.com/onezeroff"

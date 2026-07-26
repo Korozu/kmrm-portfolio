@@ -4,6 +4,7 @@ artist: "MRWL"
 date: "2026-02-07"
 venue: "Eul' Gros 4, La Brat Cave, Lille"
 cover: "/images/albums/MRWL-Gros4/cover.jpg"
+passwordHash: "d8a59f0dc4d2cc287c591a27492a17ea8b7b6eff8080c297d8ab2e9b182eab1e"
 network:
     instagram: "https://www.instagram.com/mrwlcore/"
     facebook: "https://www.facebook.com/profile.php?id=61574764651493"

@@ -4,6 +4,7 @@ artist: "Hollow Frequency"
 date: "2026-04-14"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/HollowFrequency-BlackLab/cover.jpg"
+passwordHash: "2a4bfcfa28c61e54247cb1011688482a8b5b901935ef05389e5672f00ba9e7e5"
 network:
     instagram: "https://www.instagram.com/hollow.frequency"
     facebook: "https://www.facebook.com/hollow.frequency"

@@ -4,6 +4,7 @@ artist: "Sungrave"
 date: "2026-05-13"
 venue: "La Bulle Café, Lille"
 cover: "/images/albums/Sungrave-LaBulle/cover.jpg"
+passwordHash: "ec2667195fb92707324e036e2f3cb608f55d2309042d5a0480f8525c767e82f6"
 network:
     instagram: "https://www.instagram.com/sungrave_music/"
     facebook: "https://www.facebook.com/wearesungrave"

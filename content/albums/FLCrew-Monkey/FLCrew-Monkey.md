@@ -4,6 +4,7 @@ artist: "FL Crew"
 date: "2026-01-30"
 venue: "Le Monkey Bar, Lille"
 cover: "/images/albums/FLCrew-Monkey/cover.jpg"
+passwordHash: "8048344c6c53b1353c18ab9dc257110bd6722bc4f151f93871f61e75c8276bf5"
 network:
     instagram: "https://www.instagram.com/flcrewofficiel/"
     facebook: "https://www.facebook.com/FLBandOfficiel"

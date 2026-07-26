@@ -4,6 +4,7 @@ artist: "High Desert Queen"
 date: "2026-05-20"
 venue: "La Bulle Café, Lille"
 cover: "/images/albums/HighDesertQueen-LaBulle/cover.jpg"
+passwordHash: "57becc4ec1d7bae1793954e434b7c1a32c2d5e8a9e3e327b15db62e2a8482d6f"
 network:
     instagram: "https://www.instagram.com/highdesertqueen/"
     facebook: "https://www.facebook.com/highdesertqueen"

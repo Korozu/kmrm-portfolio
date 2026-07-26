@@ -4,6 +4,7 @@ artist: "Vedette"
 date: "2026-01-23"
 venue: "High Voltage Bar, Lille"
 cover: "/images/albums/Vedette-HighVoltage/cover.jpg"
+passwordHash: "79806bcfaae9ded66910e2a5921135eb423d4b12f120dc1d5e9736872f4d8373"
 network:
     instagram: "https://www.instagram.com/vedette.music/"
     facebook: "https://www.facebook.com/vedette.band"

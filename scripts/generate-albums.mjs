@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import ExifReader from 'exifreader';
+import { generatePasswordHash } from './generate-password-hash.mjs';
 
 const ALBUMS_SOURCE = './public/images/albums';
 const CONTENT_DEST = './content/albums';
@@ -70,12 +71,15 @@ async function generate() {
             });
         }
 
+        const passwordHash = generatePasswordHash(folder);
+
         const markdown = `---
 title: "${folder.replace(/-/g, ' ')}"
 artist: "Unknown Artist"
 date: "${new Date().toISOString().split('T')[0]}"
 venue: "Unknown Venue"
 cover: "${finalCoverPath}"
+passwordHash: "${passwordHash}"
 network:
     instagram: ""
     facebook: ""
@@ -91,6 +95,7 @@ ${imageList.map(img => `  - src: "${img.src}"
 
         fs.writeFileSync(destPath, markdown);
         console.log(`✨ Dossier et Markdown générés pour : ${folder}`);
+        console.log(`🔐 Hash généré : ${passwordHash}`);
     }
 }
 

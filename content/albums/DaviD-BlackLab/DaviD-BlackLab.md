@@ -4,6 +4,7 @@ artist: "DaviD"
 date: "2026-06-04"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/DaviD-BlackLab/cover.jpg"
+passwordHash: "5b4fe876fd9d7f9255bb98de2e72ea34d2663d1389d2acf9cc21885ddef4c000"
 network:
     instagram: "https://www.instagram.com/levraimcfly/?hl=fr"
     spotify: "https://open.spotify.com/intl-fr/artist/1RojMHxK8g1WMZnVOvXkBN?si=ij9r388XQQyFvIV-zLV5WA"

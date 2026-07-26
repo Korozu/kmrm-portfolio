@@ -4,6 +4,7 @@ artist: "MRWL"
 date: "2026-03-19"
 venue: "Le Circus, Lille"
 cover: "/images/albums/MRWL-Circus/cover.jpg"
+passwordHash: "ec75c8d385595d2c2c6a06bff9f79f871a3f8db54eda7fa2eb2ad43b60d92443"
 network:
   instagram: "https://www.instagram.com/mrwlcore/"
   facebook: "https://www.facebook.com/profile.php?id=61574764651493"

@@ -4,6 +4,7 @@ artist: "SKND"
 date: "2026-02-07"
 venue: "Eul' Gros 4, La Brat Cave, Lille"
 cover: "/images/albums/SKND-Gros4/cover.jpg"
+passwordHash: "266cd2e480b486997f45aebec1e803734fb1a84c865595870c933dd08a84f077"
 network:
     instagram: "https://www.instagram.com/sknd_band/"
     facebook: "https://www.facebook.com/SkandaOfficial"

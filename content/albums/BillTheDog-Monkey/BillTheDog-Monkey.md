@@ -4,6 +4,7 @@ artist: "Bill The Dog"
 date: "2026-01-30"
 venue: "Le Monkey Bar, Lille"
 cover: "/images/albums/BillTheDog-Monkey/cover.jpg"
+passwordHash: "d91b5a6d7ca1b70beb478dca8900bcd96f287076d29277085e3ffb56b1f77b8f"
 network:
     instagram: "https://www.instagram.com/billthedogband/"
     facebook: "https://www.facebook.com/BillTheDogband"

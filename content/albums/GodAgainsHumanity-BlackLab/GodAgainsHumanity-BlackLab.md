@@ -4,6 +4,7 @@ artist: "God Against Humanity"
 date: "2026-02-17"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/GodAgainsHumanity-BlackLab/cover.jpg"
+passwordHash: "03efb41351556b6489f027a0ab62a804af6289df9ade9aca3900ce998528084f"
 network:
   facebook: "https://www.facebook.com/godagainsthumanity"
   instagram: "https://www.instagram.com/godagainsthumanity/"

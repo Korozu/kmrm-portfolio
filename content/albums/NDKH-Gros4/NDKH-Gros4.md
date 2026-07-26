@@ -4,6 +4,7 @@ artist: "NDKH"
 date: "2026-02-07"
 venue: "Eul' Gros 4, La Brat Cave, Lille"
 cover: "/images/albums/NDKH-Gros4/cover.jpg"
+passwordHash: "d6c75ff0f64e625513aff217bd753c317ccbcd1ebcc372892cb8ca9b02b59c11"
 network:
     instagram: "https://www.instagram.com/ndkh_93/"
     facebook: "https://www.facebook.com/ndkh93"

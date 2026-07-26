@@ -4,6 +4,7 @@ artist: "The Falling Tape"
 date: "2026-01-17"
 venue: "High Voltage Bar, Lille"
 cover: "/images/albums/TheFallingTape-HighVoltage/cover.jpg"
+passwordHash: "1802b1051742fc4171a5be94af0478e5c5b6b829869c8dc45e50be4ab11d2a27"
 network:
     instagram: "https://www.instagram.com/the_falling_tape/"
     facebook: "https://www.facebook.com/profile.php?id=61578133156290"

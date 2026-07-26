@@ -4,6 +4,7 @@ artist: "Red Hot Experience"
 date: "2026-04-25"
 venue: "Les Nympheas, Aulnoy-lez-Valenciennes"
 cover: "/images/albums/RedHotExperience-Nympheas/cover.jpg"
+passwordHash: "27dcdec7212e71286098efb53413030eb33adf9ce007a10416b9f8cdff91b54e"
 network:
   instagram: "https://www.instagram.com/red_hot_experience"
   facebook: "https://www.facebook.com/profile.php?id=100078015991842"

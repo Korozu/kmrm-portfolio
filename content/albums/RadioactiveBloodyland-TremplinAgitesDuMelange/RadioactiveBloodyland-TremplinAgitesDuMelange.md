@@ -4,6 +4,7 @@ artist: "Radioactive Bloodyland"
 date: "2026-05-09"
 venue: "Tremplin - Les Agités du Mélange, Vieux-Condé"
 cover: "/images/albums/RadioactiveBloodyland-TremplinAgitesDuMelange/cover.jpg"
+passwordHash: "493010095f7b27cfcddaed511430ec25e0b29dc0b639efcdb027825b272d5729"
 network:
     instagram: "https://www.instagram.com/radioactive_bloodyland/"
     facebook: "https://www.facebook.com/RadioactiveBloodyland"

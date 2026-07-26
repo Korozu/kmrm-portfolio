@@ -4,6 +4,7 @@ artist: "MRWL"
 date: "2026-04-14"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/MRWL-BlackLab/cover.jpg"
+passwordHash: "0367b686ad73c854232c04006790c858c9cc0b381c7005d739720e25fc328c5c"
 network:
   instagram: "https://www.instagram.com/mrwlcore/"
   facebook: "https://www.facebook.com/profile.php?id=61574764651493"

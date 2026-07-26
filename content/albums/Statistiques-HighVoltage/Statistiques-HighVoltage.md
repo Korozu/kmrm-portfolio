@@ -4,6 +4,7 @@ artist: "Statistiques"
 date: "2026-01-17"
 venue: "High Voltage Bar, Lille"
 cover: "/images/albums/Statistiques-HighVoltage/cover.jpg"
+passwordHash: "5db336dd9991b0ad2f2be3b4cfd4a1be89bf30901ac4c4661fe1fb7dc909e8e3"
 network:
     instagram: "https://www.instagram.com/statistiquesband/"
     facebook: "https://www.facebook.com/profile.php?id=61575504061144"

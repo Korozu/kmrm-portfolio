@@ -4,6 +4,7 @@ artist: "Mindgrief"
 date: "2026-01-23"
 venue: "Caf&Diskaire, Lille"
 cover: "/images/albums/Mindgrief-Cafediscaire/cover.jpg"
+passwordHash: "b953561150d4fe4ca961df9fca540ca63c75ac281dc69bd952766a8086737df1"
 network:
     instagram: "https://www.instagram.com/mindgrief/"
     facebook: "https://www.facebook.com/MiNDGRiEF"

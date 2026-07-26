@@ -4,6 +4,7 @@ artist: "Breakhead"
 date: "2026-03-19"
 venue: "Le Circus, Lille"
 cover: "/images/albums/Breakhead-Circus/cover.jpg"
+passwordHash: "f707a2e467064ef81dbc796f105cce842942a6e27e0fb83d96c873aee74464cf"
 network:
     instagram: "https://www.instagram.com/_breakhead_"
     facebook: "https://www.facebook.com/BreakHeadMETALBAND"

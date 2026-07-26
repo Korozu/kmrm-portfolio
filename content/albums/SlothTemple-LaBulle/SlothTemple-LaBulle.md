@@ -4,6 +4,7 @@ artist: "Sloth Temple"
 date: "2026-05-20"
 venue: "La Bulle Café, Lille"
 cover: "/images/albums/SlothTemple-LaBulle/cover.jpg"
+passwordHash: "eb15058724cfd16b0683761e88ee1de38adad7cda37b4be76c8f36bcd504badc"
 network:
     instagram: "https://www.instagram.com/sloth_temple/"
     facebook: "https://www.facebook.com/slothtemple"

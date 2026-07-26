@@ -16,6 +16,16 @@ export const translations = {
       aperture: 'Ouverture',
       iso: 'ISO'
     },
+    download: {
+      title: 'Télécharger les photos',
+      description: 'Pour télécharger les photos de cette galerie, contactez-moi sur',
+      instructionContact: 'Je vous fournirai un mot de passe pour accéder au téléchargement.',
+      passwordLabel: 'Mot de passe',
+      passwordPlaceholder: 'Entrez le mot de passe',
+      passwordError: 'Mot de passe incorrect',
+      downloadButton: 'Télécharger les photos',
+      footer: 'Les photos sont protégées par mot de passe. Merci de respecter les droits d\'auteur.'
+    },
     about: {
       title: 'À propos',
       bio: {
@@ -202,6 +212,16 @@ export const translations = {
       aperture: 'Aperture',
       iso: 'ISO'
     },
+    download: {
+      title: 'Download Photos',
+      description: 'To download photos from this gallery, contact me on',
+      instructionContact: 'I will provide you with a password to access the download.',
+      passwordLabel: 'Password',
+      passwordPlaceholder: 'Enter password',
+      passwordError: 'Incorrect password',
+      downloadButton: 'Download Photos',
+      footer: 'Photos are password protected. Please respect copyright.'
+    },
     about: {
       title: 'About',
       bio: {
@@ -271,7 +291,7 @@ export const translations = {
           },
           {
             prestation: 'Full Concert',
-            contenu: 'Set coverage, ~20 retouched photos',
+            contenu: 'Set coverage, ~20 photos retouched',
             tarif: '€100',
           },
           {

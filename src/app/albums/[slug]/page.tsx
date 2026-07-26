@@ -15,7 +15,7 @@ export async function generateStaticParams() {
     return paths;
 }
 
-export default async function AlbumPage({params}: { params: Promise<{ slug: string }> }) {
+export default async function AlbumPage({params}: Readonly<{ params: Promise<{ slug: string }> }>) {
     const { slug } = await params;
 
     const album = allAlbums.find((album) => album.slug === slug);
@@ -26,7 +26,12 @@ export default async function AlbumPage({params}: { params: Promise<{ slug: stri
         <main className="min-h-screen bg-black text-white">
             <GalleryHeader album={album}/>
             <div className="container mx-auto px-4">
-                <AlbumGallery images={album.images} title={album.title} date={album.date}/>
+                <AlbumGallery
+                    images={album.images}
+                    title={album.title}
+                    date={album.date}
+                    passwordHash={album.passwordHash}
+                />
             </div>
             <div className="h-24 md:h-24"/>
         </main>

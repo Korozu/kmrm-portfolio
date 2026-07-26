@@ -4,6 +4,7 @@ artist: "Dope4mind"
 date: "2026-03-05"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/Dope4mind-BlackLab/cover.jpg"
+passwordHash: "d97f0761b76ecc61bb9d93f582bf764eab11acf83b93b9c633b48345bcfd9c49"
 network:
     instagram: "https://www.instagram.com/dope4mind.official/?hl=fr"
     facebook: "https://www.facebook.com/profile.php?id=61569672370620"

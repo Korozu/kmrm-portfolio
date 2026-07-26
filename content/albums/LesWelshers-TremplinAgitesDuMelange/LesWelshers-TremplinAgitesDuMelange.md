@@ -4,6 +4,7 @@ artist: "Les Welshers"
 date: "2026-05-09"
 venue: "Tremplin - Les Agités du Mélange, Vieux-Condé"
 cover: "/images/albums/LesWelshers-TremplinAgitesDuMelange/cover.jpg"
+passwordHash: "c54f520b5ef105c7354373732ee137b65fc7733912d5edc12414ce9843c48e1d"
 network:
     instagram: "https://www.instagram.com/leswelshers/"
     facebook: "https://www.facebook.com/LesWelshers"

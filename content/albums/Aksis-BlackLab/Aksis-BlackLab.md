@@ -4,6 +4,7 @@ artist: "Aksis"
 date: "2026-03-03"
 venue: "The Black Lab, Wasquehal"
 cover: "/images/albums/Aksis-BlackLab/cover.jpg"
+passwordHash: "62b3e78513cd8c18f4a1dc510d5199a3cb2c935fbeaee477f014bf73f1365604"
 network:
     instagram: "https://www.instagram.com/aksisband_official/?hl=fr"
     facebook: "https://www.facebook.com/profile.php?id=61555435011096"

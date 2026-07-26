@@ -4,6 +4,7 @@ artist: "AĦNA"
 date: "2026-02-07"
 venue: "Eul' Gros 4, La Brat Cave, Lille"
 cover: "/images/albums/ANHA-Gros4/cover.jpg"
+passwordHash: "3881bf477feae8cb2b67f9b065441ba9b94f01043c172c3251312c034bb0d94c"
 network:
     instagram: "https://www.instagram.com/ahna.band/"
     facebook: "https://www.facebook.com/ahna.band"

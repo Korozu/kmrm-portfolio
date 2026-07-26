@@ -4,6 +4,7 @@ artist: "Barabbas"
 date: "2026-05-09"
 venue: "Tremplin - Les Agités du Mélange, Vieux-Condé"
 cover: "/images/albums/Barrabas-TremplinAgitesDuMelange/KMR06947.jpg"
+passwordHash: "816c675ae494d1c9e19cb191e36c2ced56866d16006e7d8fee52ff4c4f982120"
 network:
     instagram: "https://www.instagram.com/b.a.r.a.b.b.a.s/"
     facebook: "https://www.facebook.com/profile.php?id=61567620545239"

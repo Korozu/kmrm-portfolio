@@ -4,6 +4,7 @@ artist: "La Faiblesse"
 date: "2026-01-30"
 venue: "Le Monkey Bar, Lille"
 cover: "/images/albums/LaFaiblesse-Monkey/cover.jpg"
+passwordHash: "89e78584cc375f8008394bed4e81fa2a827ca4781ce3ce7d200cb0b007b3f9b6"
 network:
     instagram: "https://www.instagram.com/la_faiblesse_paris/"
     facebook: "https://www.facebook.com/lafaiblesseparis"

@@ -4,6 +4,7 @@ artist: "Anorexic Sumotori"
 date: "2026-05-09"
 venue: "Tremplin - Les Agités du Mélange, Vieux-Condé"
 cover: "/images/albums/AnorexicSumotori-TremplinAgitesDuMelange/cover.jpg"
+passwordHash: "5f7e1e3f15a14539f65e5539cd25cd06ceb7b80ccebe0417a0851cddac8dc551"
 network:
     instagram: "https://www.instagram.com/anorexic_sumotori/"
     facebook: "https://www.facebook.com/anorexicsumotori"
