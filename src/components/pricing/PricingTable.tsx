@@ -3,7 +3,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export interface PricingRow {
   prestation: string;
-  contenu: string;
+  contenu: string[];
   tarif: string;
 }
 
@@ -21,7 +21,7 @@ export default function PricingTable({
   rows,
   notes,
   className = '',
-}: PricingTableProps) {
+}: Readonly<PricingTableProps>) {
   const { t } = useLanguage();
 
   return (
@@ -51,7 +51,16 @@ export default function PricingTable({
                 className="border-b border-muted/30 hover:bg-primary/10 transition-colors"
               >
                 <td className="p-4 font-medium text-zinc-100">{row.prestation}</td>
-                <td className="p-4 text-zinc-300 text-sm">{row.contenu}</td>
+                <td className="p-4 text-zinc-300 text-sm">
+                  <ul className="space-y-1">
+                    {row.contenu.map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <span className="mr-2 text-primary">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </td>
                 <td className="p-4 text-right font-semibold text-lg whitespace-nowrap text-primary">
                   {row.tarif}
                 </td>

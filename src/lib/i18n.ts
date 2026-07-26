@@ -86,21 +86,21 @@ export const translations = {
       },
       amateurs: {
         title: 'Groupes Amateurs & Émergents',
-        description: 'Prix d\'appel très doux, parfait pour se constituer un réseau et faire tourner la structure.',
+        description: 'Boostez votre image de scène avec un rendu pro, sans faire exploser le budget du groupe !',
         rows: [
           {
             prestation: 'Photos Promo / Groupe',
-            contenu: '1h sur place, 5 à 8 photos retouchées',
+            contenu: ['~2h sur place', '10 à 15 photos'],
             tarif: '80 €',
           },
           {
             prestation: 'Concert Complet',
-            contenu: 'Couverture du set, ~20 photos retouchées',
+            contenu: ['Couverture du set', '~20 photos'],
             tarif: '100 €',
           },
           {
             prestation: 'Concert + Backstage',
-            contenu: 'Balances + coulisses + set, 30 à 40 photos',
+            contenu: ['Balances + coulisses + set', '30 à 40 photos'],
             tarif: '150 €',
           },
         ],
@@ -110,21 +110,16 @@ export const translations = {
       },
       pros: {
         title: 'Groupes Pros & Labels',
-        description: 'Des tarifs abordables pour des petites prods ou des groupes en développement qui cherchent un rendu efficace sans payer le tarif d\'un boîtier 24x36.',
+        description: 'Valorisez vos tournées et votre identité visuelle avec une couverture photo haute intensité et un flux de livraison réactif.',
         rows: [
           {
-            prestation: 'Photos Promo / Groupe',
-            contenu: '1h30 à 2h, travail sur la lumière, 10 photos',
-            tarif: '180 €',
-          },
-          {
             prestation: 'Concert Complet',
-            contenu: 'Présence ~2h, ~20 photos (livraison 24h/48h)',
+            contenu: ['Couverture du set', '~20 photos', 'Livraison 24h/48h'],
             tarif: '200 €',
           },
           {
             prestation: 'Concert + Backstage',
-            contenu: 'Immersion globale (balances au post-show), 30 à 40 photos',
+            contenu: ['Immersion globale (balances au post-show)', '30 à 40 photos'],
             tarif: '300 €',
           },
         ],
@@ -134,22 +129,22 @@ export const translations = {
       },
       collectivites: {
         title: 'Mairies & Collectivités',
-        description: 'Adapté aux événements locaux, fêtes de la musique, scènes d\'été et petits festivals de la métropole lilloise.',
+        description: 'Sublimez la vie culturelle de votre commune et immortalisez l\'énergie de vos événements avec un regard expert et une gestion administrative simplifiée.',
         rows: [
           {
-            prestation: 'Photos Promo / Officiel',
-            contenu: 'Portraits/presse pour programmation, 10 photos',
-            tarif: '150 €',
+            prestation: 'Format Court (Inauguration, cérémonie)',
+            contenu: ['Reportage complet', '2h de présence', 'Livraison sous 48h-72h', '20 à 30 photos'],
+            tarif: '180 €',
           },
           {
-            prestation: 'Concert / Plateau Unique',
-            contenu: 'Couverture d\'une tête d\'affiche ou soirée, ~20 photos',
-            tarif: '250 €',
+            prestation: 'Demi-Journée (Forum associatif, compétition, festival court)',
+            contenu: ['Reportage complet (ambiance, temps forts, détails)', '4h de présence', 'Livraison sous 48h-72h', '30 à 50 photos'],
+            tarif: '320 €',
           },
           {
-            prestation: 'Événement Complet + Backstage',
-            contenu: 'Soirée/Demi-journée globale (ambiance, public, coulisses), 35 à 45 photos',
-            tarif: '380 €',
+            prestation: 'Journée / Soirée (Fête de la ville, festival, événement majeur)',
+            contenu: ['Couverture intégrale de l\'événement', '8h de présence', '50+ visuels HD retouchés', 'Sélection express (5 à 10 photos sous 24h pour réseaux/presse)'],
+            tarif: '580 €',
           },
         ],
         notes: [
@@ -282,70 +277,65 @@ export const translations = {
       },
       amateurs: {
         title: 'Amateur & Emerging Bands',
-        description: 'Very affordable prices, perfect for building a network and keeping the structure running.',
+        description: 'Elevate your stage presence with a pro-level look, without blowing the band\'s budget!',
         rows: [
           {
             prestation: 'Promo Photos / Band',
-            contenu: '1h on site, 5 to 8 retouched photos',
-            tarif: '€80',
+            contenu: ['~2h on site', '10 to 15 edited photos'],
+            tarif: '80 €',
           },
           {
             prestation: 'Full Concert',
-            contenu: 'Set coverage, ~20 photos retouched',
-            tarif: '€100',
+            contenu: ['Full set coverage', '~20 edited photos'],
+            tarif: '100 €',
           },
           {
             prestation: 'Concert + Backstage',
-            contenu: 'Soundcheck + backstage + set, 30 to 40 photos',
-            tarif: '€150',
+            contenu: ['Soundcheck + backstage + set', '30 to 40 edited photos'],
+            tarif: '150 €',
           },
         ],
         notes: [
-          'Subscription / Packs (On quote): Package of 3 concerts per season at €240 (instead of €300), i.e. €80 per concert.'
+          'Subscription / Packs (On quote): Package of 3 concerts per season at 240 € (instead of 300 €), i.e. 80 € per concert.'
         ],
       },
       pros: {
         title: 'Professional Bands & Labels',
-        description: 'Affordable rates for small productions or developing bands looking for effective results without paying for a 24x36 camera.',
+        description: 'Enhance your tours and visual identity with high-intensity photo coverage and a rapid turnaround delivery workflow.',
         rows: [
           {
-            prestation: 'Promo Photos / Band',
-            contenu: '1h30 to 2h, lighting work, 10 photos',
-            tarif: '€180',
-          },
-          {
             prestation: 'Full Concert',
-            contenu: 'Presence ~2h, ~20 photos (24h/48h delivery)',
-            tarif: '€200',
+            contenu: ['Full set coverage', '~20 photos', '24h/48h delivery'],
+            tarif: '200 €',
           },
           {
             prestation: 'Concert + Backstage',
-            contenu: 'Full immersion (soundcheck to post-show), 30 to 40 photos',
-            tarif: '€300',
+            contenu: ['Full immersion (soundcheck to post-show)', '30 to 40 photos'],
+            tarif: '300 €',
           },
         ],
         notes: [
-          'Subscription (On quote): Coverage of 4 regional tour dates for €700 (instead of €800).',
+          'Subscription (On quote): Coverage of 4 regional tour dates for 700 € (instead of 800 €).',
         ],
       },
       collectivites: {
         title: 'Municipalities & Public Bodies',
-        description: 'Adapted to local events, music festivals, summer stages and small festivals in the Lille metropolis.',
+        description: 'Enhance your municipality\'s cultural life and capture the energy of your events with expert insight and streamlined administrative management.',
         rows: [
           {
-            prestation: 'Promo Photos / Official',
-            contenu: 'Portraits/press for programming, 10 photos',
-            tarif: '€150',
+            prestation: 'Short Format (Inauguration, ceremony)',
+            contenu: ['Complete report', '2h presence', 'Delivery within 48h-72h', '20 to 30 edited photos'],
+            tarif: '180 €',
           },
           {
-            prestation: 'Concert / Single Act',
-            contenu: 'Coverage of a headliner or evening, ~20 photos',
-            tarif: '€250',
+            prestation: 'Half-Day (Community forum, competition, short festival)',
+            contenu: ['Complete report (atmosphere, highlights, details)', '4h presence', 'Delivery within 48h-72h', '30 to 50 edited photos'],
+            tarif: '320 €',
           },
           {
-            prestation: 'Full Event + Backstage',
-            contenu: 'Evening/Half-day global (atmosphere, public, backstage), 35 to 45 photos',
-            tarif: '€380',
+            prestation: 'Full Day / Evening (City festival, major event)',
+            contenu: ['Full event coverage', '8h presence', '50+ edited HD visuals', 'Express selection (5 to 10 photos within 24h for social media/press)'],
+            tarif: '580 €',
           },
         ],
         notes: [
