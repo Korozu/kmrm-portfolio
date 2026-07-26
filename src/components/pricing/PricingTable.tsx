@@ -2,9 +2,9 @@ import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export interface PricingRow {
-  prestation: string;
-  contenu: string[];
-  tarif: string;
+  readonly prestation: string;
+  readonly contenu: readonly string[];
+  readonly tarif: string;
 }
 
 export interface PricingTableProps {
