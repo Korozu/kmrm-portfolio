@@ -192,8 +192,13 @@ export const translations = {
       },
       association: {
         text: 'Choisir Komoremi, c\'est soutenir une association passionnée (Loi 1901) ! Chaque prestation nous permet de financer du matériel plus performant et d\'élever continuellement la qualité visuelle des projets que nous couvrons avec vous.',
-      },
+      }
     },
+    components: {
+      searchInput: {
+        placeholder: 'Rechercher un groupe, un festival, un concert...'
+      }
+    }
   },
   en: {
     nav: {
@@ -383,8 +388,13 @@ export const translations = {
       },
       association: {
         text: 'Choosing Komoremi means supporting a passionate non-profit organization (French Law 1901)! Each service allows us to finance better equipment and continuously elevate the visual quality of the projects we cover with you.',
-      },
+      }
     },
+    components: {
+      searchInput: {
+        placeholder: 'Search for a band, festival, concert...'
+      }
+    }
   },
 } as const;
 
