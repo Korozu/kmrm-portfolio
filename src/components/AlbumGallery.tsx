@@ -1,15 +1,15 @@
 "use client";
 
-import {MouseEventHandler, useEffect, useState, useCallback} from "react";
+import { MouseEventHandler, useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import {AnimatePresence, motion} from "framer-motion";
-import {ImageObject} from "contentlayer/generated";
+import { AnimatePresence, motion } from "framer-motion";
+import { ImageObject } from "contentlayer/generated";
 import Link from "next/link";
-import {ArrowLeft, Download} from "lucide-react";
-import {ExifData} from '@/components/ExifDataRow';
+import { ArrowLeft, Download } from "lucide-react";
+import { ExifData } from '@/components/ExifDataRow';
 import DownloadModal from '@/components/DownloadModal';
-import {useLanguage} from '@/contexts/LanguageContext';
-import {downloadAlbumAsZip} from '@/lib/downloadUtils';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { downloadAlbumAsZip } from '@/lib/downloadUtils';
 
 interface AlbumGalleryProps {
     images: ImageObject[];
@@ -18,7 +18,7 @@ interface AlbumGalleryProps {
     passwordHash?: string;
 }
 
-export default function AlbumGallery({images, title, passwordHash}: Readonly<AlbumGalleryProps>) {
+export default function AlbumGallery({ images, title, passwordHash }: Readonly<AlbumGalleryProps>) {
     const [selectedImg, setSelectedImg] = useState<ImageObject | null>(null);
     const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
     const [isDownloading, setIsDownloading] = useState(false);
@@ -62,7 +62,7 @@ export default function AlbumGallery({images, title, passwordHash}: Readonly<Alb
                     className="inline-flex items-center gap-2 text-zinc-500 hover:text-white transition-colors group">
                     <div
                         className="p-2 rounded-full border border-zinc-800 group-hover:border-zinc-400 transition-colors">
-                        <ArrowLeft size={16}/>
+                        <ArrowLeft size={16} />
                     </div>
                     <span className="text-xs uppercase tracking-[0.2em] font-medium">Retour</span>
                 </Link>
@@ -83,30 +83,34 @@ export default function AlbumGallery({images, title, passwordHash}: Readonly<Alb
             <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
                 {images.map((image, i) => (
                     <motion.div
-                        key={image.src+i}
+                        key={image.src + i}
                         layoutId={image.src}
-                        className="group relative break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-zinc-900"
+                        className="group relative break-inside-avoid cursor-pointer overflow-hidden rounded-sm bg-zinc-900 select-none"
+                        style={{ WebkitTouchCallout: 'none' }} // Crucial pour iOS : empêche le menu natif et laisse passer le JS
                         onClick={() => setSelectedImg(image)}
+                        onContextMenu={handleContextMenu} // Actif sur bureau (clic droit) et mobile (appui long)
                     >
                         <Image
                             src={image.src}
-                            alt={`${title} - Photo ${i}`}
+                            alt={`${title} Photo ${i}`}
                             width={800}
                             height={1200}
-                            className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
+                            className="w-full h-auto transition-transform duration-700 group-hover:scale-105 pointer-events-none"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
 
+                        {/* Calque desktop pour les EXIFs au survol */}
                         <div
                             className="hidden md:flex absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] items-end"
-                            onContextMenu={handleContextMenu}
                             role="button"
                             tabIndex={0}
                         >
-                            <ExifData iso={image.iso} aperture={image.aperture} shutterSpeed={image.shutterSpeed}/>
+                            <ExifData iso={image.iso} aperture={image.aperture} shutterSpeed={image.shutterSpeed} />
                         </div>
-                        <div className="md:hidden absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent">
-                            <ExifData iso={image.iso} aperture={image.aperture} shutterSpeed={image.shutterSpeed}/>
+
+                        {/* Calque mobile : Exif fixe en bas */}
+                        <div className="md:hidden absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
+                            <ExifData iso={image.iso} aperture={image.aperture} shutterSpeed={image.shutterSpeed} />
                         </div>
                     </motion.div>
                 ))}
@@ -117,9 +121,9 @@ export default function AlbumGallery({images, title, passwordHash}: Readonly<Alb
                 {selectedImg && (
                     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-10">
                         <motion.div
-                            initial={{opacity: 0}}
-                            animate={{opacity: 1}}
-                            exit={{opacity: 0}}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
                             onClick={() => setSelectedImg(null)}
                             className="absolute inset-0 bg-black/95 backdrop-blur-sm cursor-zoom-out"
                         />
