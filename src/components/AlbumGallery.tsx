@@ -125,6 +125,7 @@ export default function AlbumGallery({ images, title, passwordHash }: Readonly<A
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedImg(null)}
+                            onContextMenu={handleContextMenu}
                             className="absolute inset-0 bg-black/95 backdrop-blur-sm cursor-zoom-out"
                         />
 
@@ -143,7 +144,6 @@ export default function AlbumGallery({ images, title, passwordHash }: Readonly<A
                                 />
                                 <div
                                     className="hidden md:flex absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] items-end"
-                                    onContextMenu={handleContextMenu}
                                     role="button"
                                     tabIndex={0}
                                 />
