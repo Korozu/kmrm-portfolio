@@ -3,7 +3,7 @@ title: "LGDG IceSealedEyes"
 artist: "Ice Sealed Eyes"
 date: "2026-10-24"
 venue: "La Guerre des Gaules, Chênée, BE"
-cover: "/images/albums/LGDG-IceSealedEyes/KMR09506.jpg"
+cover: "/images/albums/LGDG-IceSealedEyes/KMR09559.jpg"
 passwordHash: "4f9a27e5397c59e14cbe363e8a4c8a6475ab9df194d258561e6221af694103e8"
 network:
     instagram: "https://www.instagram.com/icesealedeyes"
